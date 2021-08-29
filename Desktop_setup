@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+
+#Essential
+sudo apt update && sudo apt upgrade -y 
+echo "deb http://http.kali.org/kali kali-last-snapshot main non-free contrib" | sudo tee /etc/apt/sources.list
+sudo apt-get install firmware-linux
+sudo apt update && sudo apt upgrade -y
+sudo apt install curl -y
+#Optional apps
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
+sudo apt install timeshift code-oss -y 
+sudo apt install deluge vlc -y
+#Cleaning code
+sudo apt autoremove
+sudo apt autoclean
+#Deloat
+sudo apt purge firefox-esr
+#clear
+clear
+exit 0
