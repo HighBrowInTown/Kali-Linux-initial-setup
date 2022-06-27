@@ -14,10 +14,7 @@ sudo apt-get update && sudo apt-get install spotify-client
 sudo apt install timeshift code-oss -y 
 sudo apt install deluge vlc -y
 #Cleaning code
-sudo apt autoremove
-sudo apt autoclean
-#Deloat
-sudo apt purge firefox-esr
+sudo apt autoremove -y ; sudo apt autoclean -y 
 #clear
 clear
 exit 0
